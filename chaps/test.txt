@@ -1,0 +1,22 @@
+---
+title: A bird in forest
+author: Dangthaii
+---
+
+[p]
+- There is a bird.
+- Có một con chim.
+- Đó là một con chim.
+
+- The cat can fly.
+- Con chim có thể bay.
+- Chim thì bay được.
+
+[p]
+- There is a bird2.
+- Có một con chim2.
+- Đó là một con chim2.
+
+- The cat can fly2.
+- Con chim có thể bay2.
+- Chim thì bay được2.
