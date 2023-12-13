@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 8090",
-    "build": "next build",
+    "build": "next build && npm run copy-chaps",
     "start": "next start",
     "lint": "next lint",
     "postbuild": "npm run copy-chaps",
