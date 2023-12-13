@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "npm run copy-chaps",
-    "copy-chaps": "ncp ./chaps ./.next/chaps"
+    "copy-chaps": "ncp ./chaps ./chaps"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
