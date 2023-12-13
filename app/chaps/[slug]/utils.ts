@@ -19,9 +19,7 @@ export const parseContent = (content: string) => {
   const enContext = content.slice(startIndex, endIndex).trim();
   const viContext = content.slice(endIndex + "[vi]".length).trim();
   const enResult = parseToArray(enContext);
-  console.log("enResult :", enResult);
   const viResult = parseToArray(viContext);
-  console.log("viResult :", viResult);
 
   const mergedArray = enResult.map((item, i) => {
     return item.map((item, j) => {
