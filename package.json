@@ -6,12 +6,15 @@
     "dev": "next dev -p 8090",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "npm run copy-chaps",
+    "copy-chaps": "ncp ./chaps ./.next/chaps"
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "antd": "^5.12.2",
     "gray-matter": "^4.0.3",
+    "ncp": "^2.0.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
