@@ -50,7 +50,11 @@ export default function ChapDetail({ params }: any) {
       <h1 className="text-4xl font-bold mb-10">{fontMatter.title}</h1>
       {parsed.map((p: string[][], index: number) => {
         return (
-          <p key={index} className="mt-6 text-justify" onSelect={console.log}>
+          <p
+            key={index}
+            className="mt-6 text-justify text-[17px] line font-light text-red-50 leading-7"
+            onSelect={console.log}
+          >
             {p.map((s: string[], index: number) => {
               return (
                 <React.Fragment key={index}>
