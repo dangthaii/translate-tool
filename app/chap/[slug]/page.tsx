@@ -1,11 +1,13 @@
 "use client";
-import { parseContent } from "./utils";
+import { chaps } from "@/app/data";
+import matter from "gray-matter";
 import React, { useEffect, useMemo, useState } from "react";
 import { Sentence } from "./Sentence";
-import { getChap } from "./getChap";
+import { parseContent } from "./utils";
 
 export default function ChapDetail({ params }: any) {
-  const [result, setResult] = React.useState<any>(null);
+  console.log("params :", params);
+  const { slug } = params || {};
   const [isControlKeyPressed, setIsControlKeyPressed] = useState(false);
 
   useEffect(() => {
@@ -33,22 +35,16 @@ export default function ChapDetail({ params }: any) {
     };
   }, []);
 
-  React.useEffect(() => {
-    getChap(params).then((res) => {
-      setResult(res);
-    });
-  }, [params]);
+  const chap = chaps.find((chap) => chap.slug === slug);
+  if (!chap) return undefined;
 
-  const { fontMatter, content } = result || {};
+  const { data: fontMatter, content } = matter(chap);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const parsed = useMemo(() => {
     if (!content) return [];
     return parseContent(content);
   }, [content]);
-
-  if (!result) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <article>
