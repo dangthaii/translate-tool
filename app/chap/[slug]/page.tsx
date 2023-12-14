@@ -6,7 +6,6 @@ import { Sentence } from "./Sentence";
 import { parseContent } from "./utils";
 
 export default function ChapDetail({ params }: any) {
-  console.log("params :", params);
   const { slug } = params || {};
   const [isControlKeyPressed, setIsControlKeyPressed] = useState(false);
 
