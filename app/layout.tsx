@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Literata } from "next/font/google";
 import "./globals.css";
+import ClientNavigation from "./components/ClientNavigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
       lang="en"
       className="bg-slate-900 text-white max-w-4xl mx-auto py-20 px-4"
     >
-      <body className={literata.className}>{children}</body>
+      <body className={literata.className}>
+        <ClientNavigation />
+        {children}
+      </body>
     </html>
   );
 }
