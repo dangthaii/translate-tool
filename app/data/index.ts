@@ -5,5 +5,7 @@ import { chap03 } from "./03";
 import { chap04 } from "./04";
 import { chap05 } from "./05";
 import { chap06 } from "./06";
+import { chap07 } from "./07";
+import { chap08 } from "./08";
 
-export const chaps = [chap05, chap06];
+export const chaps = [chap05, chap06, chap07, chap08];
