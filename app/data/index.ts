@@ -12,5 +12,7 @@ import { chap10 } from "./10";
 import { chap11 } from "./11";
 import { chap12 } from "./12";
 import { chap13 } from "./13";
+import { chap14 } from "./14";
+import { chap15 } from "./15";
 
-export const chaps = [chap12, chap13];
+export const chaps = [chap14, chap15];
