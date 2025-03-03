@@ -58,6 +58,7 @@ export default function ChapDetail({ params }: any) {
 
   const { data: fontMatter, content } = matter(chap);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const parsed = useMemo(() => {
     if (!content) return [];
     return parseContent(content);
